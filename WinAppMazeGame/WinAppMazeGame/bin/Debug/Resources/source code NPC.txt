@@ -1,0 +1,500 @@
+public enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
+    public class NonPlayerCharacter
+    {
+        private int[,] mMatrix;
+
+        private int mRow, mColumn;
+        private int mM, mN;
+        private Direction mDirection;
+        private int mMiliseconds;
+
+        public NonPlayerCharacter()
+        {
+            mRow = 0; mColumn = 0;
+            mM = 0; mN = 0;
+            mMiliseconds = 100;
+        }
+
+        public void CreateMatrix(int r, int c)
+        {
+            mMatrix = new int[r, c];
+            mM = r; mN = c;
+        }
+
+        public void InitializeMatrix(int[,] a)
+        {
+            int i, j;
+
+            for (i = 0; i < mM; i++)
+            {
+                for (j = 0; j < mN; j++)
+                {
+                    mMatrix[i, j] = a[i, j];
+                }
+            }
+        }
+
+        public void InitializeRoad()
+        {
+            mRow = 0; mColumn = 0;
+        }
+
+        public void LocalizeStart()
+        {
+            int i, j;
+
+            for (i = 0; i < mM; i++)
+            {
+                for (j = 0; j < mN; j++)
+                {
+                    if (mMatrix[i, j] == 2)
+                    {
+                        mRow = i; mColumn = j;
+                    }
+                }
+            }
+        }
+
+        public void DetermineStartDirection()
+        {
+            if (mMatrix[mRow, mColumn + 1] != 0)
+            {
+                mDirection = Direction.Right;
+            }
+            if (mMatrix[mRow, mColumn - 1] != 0)
+            {
+                mDirection = Direction.Left;
+            }
+            if (mMatrix[mRow - 1, mColumn] != 0)
+            {
+                mDirection = Direction.Up;
+            }
+            if (mMatrix[mRow + 1, mColumn] != 0)
+            {
+                mDirection = Direction.Down;
+            }
+        }
+
+        public void MoveRightSide(PictureBox picWalker)
+        {
+            picWalker.Left = picWalker.Left + 25;
+            mColumn++;
+        }
+
+        public void MoveLeftSide(PictureBox picWalker)
+        {
+            picWalker.Left = picWalker.Left - 25;
+            mColumn--;
+        }
+
+        public void MoveUpSide(PictureBox picWalker)
+        {
+            picWalker.Top = picWalker.Top - 25;
+            mRow--;
+        }
+
+        public void MoveDownSide(PictureBox picWalker)
+        {
+            picWalker.Top = picWalker.Top + 25;
+            mRow++;
+        }
+
+        public void InitializeRapidMovement(PictureBox picWalker)
+        {
+            DetermineStartDirection();
+
+            switch (mDirection)
+            {
+                case Direction.Down:
+                    MoveDownSide(picWalker);
+                    break;
+                case Direction.Up:
+                    MoveUpSide(picWalker);
+                    break;
+                case Direction.Right:
+                    MoveRightSide(picWalker);
+                    break;
+                case Direction.Left:
+                    MoveLeftSide(picWalker);
+                    break;
+            }
+        }
+
+        public void InitializePausedMovement(TextBox txtDirection, PictureBox picWalker)
+        {
+            DetermineStartDirection();
+
+            switch (mDirection)
+            {
+                case Direction.Down:
+                    MoveDownSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                    txtDirection.Text = mDirection.ToString();
+                    break;
+                case Direction.Up:
+                    MoveUpSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                    txtDirection.Text = mDirection.ToString();
+                    break;
+                case Direction.Right:
+                    MoveRightSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                    txtDirection.Text = mDirection.ToString();
+                    break;
+                case Direction.Left:
+                    MoveLeftSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                    txtDirection.Text = mDirection.ToString();
+                    break;
+            }
+        }
+
+        public bool DetermineFinishDirection(PictureBox picWalker)
+        {
+            if (mMatrix[mRow, mColumn + 1] == 3)
+            {
+                mDirection = Direction.Right;
+                MoveRightSide(picWalker);
+                return true;
+            }
+            else if (mMatrix[mRow, mColumn - 1] == 3)
+            {
+                mDirection = Direction.Left;
+                MoveLeftSide(picWalker);
+                return true;
+            }
+            else if (mMatrix[mRow - 1, mColumn] == 3)
+            {
+                mDirection = Direction.Up;
+                MoveUpSide(picWalker);
+                return true;
+            }
+            else if (mMatrix[mRow + 1, mColumn] == 3)
+            {
+                mDirection = Direction.Down;
+                MoveDownSide(picWalker);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public bool ObserveRightSide()
+        {
+            if (mMatrix[mRow, mColumn + 1] != 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool ObserveLeftSide()
+        {
+            if (mMatrix[mRow, mColumn - 1] != 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool ObserveUpSide()
+        {
+            if (mMatrix[mRow - 1, mColumn] != 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool ObserveDownSide()
+        {
+            if (mMatrix[mRow + 1, mColumn] != 0)
+                return true;
+            else
+                return false;
+        }
+
+        public void RapidMovementWithAI(PictureBox picWalker)
+        {
+            if (mDirection == Direction.Right)
+            {
+                if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    MoveRightSide(picWalker);
+                }
+                else if (ObserveUpSide() == true && ObserveDownSide() == false && ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    MoveRightSide(picWalker);
+                }
+                else if (ObserveDownSide() == true)
+                {
+                    mDirection = Direction.Down;
+                    MoveDownSide(picWalker);
+                }
+                else if (ObserveUpSide() == true && ObserveDownSide() == false && ObserveRightSide() == false)
+                {
+                    mDirection = Direction.Up;
+                    MoveUpSide(picWalker);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveRightSide() == false)
+                {
+                    mDirection = Direction.Left;
+                    MoveLeftSide(picWalker);
+                }
+            }
+
+            if (mDirection == Direction.Left)
+            {
+                if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveLeftSide() == true)
+                {
+                    mDirection = Direction.Left;
+                    MoveLeftSide(picWalker);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == true && ObserveLeftSide() == true)
+                {
+                    mDirection = Direction.Left;
+                    MoveLeftSide(picWalker);
+                }
+                else if (ObserveUpSide() == true)
+                {
+                    mDirection = Direction.Up;
+                    MoveUpSide(picWalker);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == true && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Down;
+                    MoveDownSide(picWalker);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Right;
+                    MoveRightSide(picWalker);
+                }
+            }
+
+            if (mDirection == Direction.Up)
+            {
+                if (ObserveLeftSide() == false && ObserveRightSide() == false && ObserveUpSide() == true)
+                {
+                    mDirection = Direction.Up;
+                    MoveUpSide(picWalker);
+                }
+                else if (ObserveLeftSide() == true && ObserveRightSide() == false && ObserveUpSide() == true)
+                {
+                    mDirection = Direction.Up;
+                    MoveUpSide(picWalker);
+                }
+                else if (ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    MoveRightSide(picWalker);
+                }
+                else if (ObserveLeftSide() == true && ObserveUpSide() == false && ObserveRightSide() == false)
+                {
+                    mDirection = Direction.Left;
+                    MoveLeftSide(picWalker);
+                }
+                else if (ObserveUpSide() == false && ObserveRightSide() == false && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Down;
+                    MoveDownSide(picWalker);
+                }
+            }
+
+            if (mDirection == Direction.Down)
+            {
+                if (ObserveLeftSide() == false && ObserveRightSide() == false && ObserveDownSide() == true)
+                {
+                    mDirection = Direction.Down;
+                    MoveDownSide(picWalker);
+                }
+                else if (ObserveLeftSide() == false && ObserveRightSide() == true && ObserveDownSide() == true)
+                {
+                    mDirection = Direction.Down;
+                    MoveDownSide(picWalker);
+                }
+                else if (ObserveLeftSide() == true)
+                {
+                    mDirection = Direction.Left;
+                    MoveLeftSide(picWalker);
+                }
+                else if (ObserveLeftSide() == false && ObserveDownSide() == false && ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    MoveRightSide(picWalker);
+                }
+                else if (ObserveDownSide() == false && ObserveRightSide() == false && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Up;
+                    MoveUpSide(picWalker);
+                }
+            }
+
+        }
+
+        public void PausedMovementWithAI(TextBox txtDirection, PictureBox picWalker)
+        {
+            if (mDirection == Direction.Right)
+            {
+                if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveRightSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == true && ObserveDownSide() == false && ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveRightSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveDownSide() == true)
+                {
+                    mDirection = Direction.Down;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveDownSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == true && ObserveDownSide() == false && ObserveRightSide() == false)
+                {
+                    mDirection = Direction.Up;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveUpSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveRightSide() == false)
+                {
+                    mDirection = Direction.Left;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveLeftSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+            }
+
+            if (mDirection == Direction.Left)
+            {
+                if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveLeftSide() == true)
+                {
+                    mDirection = Direction.Left;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveLeftSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == true && ObserveLeftSide() == true)
+                {
+                    mDirection = Direction.Left;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveLeftSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == true)
+                {
+                    mDirection = Direction.Up;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveUpSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == true && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Down;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveDownSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == false && ObserveDownSide() == false && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Right;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveRightSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+            }
+
+            if (mDirection == Direction.Up)
+            {
+                if (ObserveLeftSide() == false && ObserveRightSide() == false && ObserveUpSide() == true)
+                {
+                    mDirection = Direction.Up;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveUpSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveLeftSide() == true && ObserveRightSide() == false && ObserveUpSide() == true)
+                {
+                    mDirection = Direction.Up;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveUpSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveRightSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveLeftSide() == true && ObserveUpSide() == false && ObserveRightSide() == false)
+                {
+                    mDirection = Direction.Left;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveLeftSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveUpSide() == false && ObserveRightSide() == false && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Down;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveDownSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+            }
+
+            if (mDirection == Direction.Down)
+            {
+                if (ObserveLeftSide() == false && ObserveRightSide() == false && ObserveDownSide() == true)
+                {
+                    mDirection = Direction.Down;
+                    MoveDownSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveLeftSide() == false && ObserveRightSide() == true && ObserveDownSide() == true)
+                {
+                    mDirection = Direction.Down;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveDownSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveLeftSide() == true)
+                {
+                    mDirection = Direction.Left;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveLeftSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveLeftSide() == false && ObserveDownSide() == false && ObserveRightSide() == true)
+                {
+                    mDirection = Direction.Right;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveRightSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+                else if (ObserveDownSide() == false && ObserveRightSide() == false && ObserveLeftSide() == false)
+                {
+                    mDirection = Direction.Up;
+                    txtDirection.Text = mDirection.ToString();
+                    MoveUpSide(picWalker);
+                    Thread.Sleep(mMiliseconds);
+                }
+            }
+
+        }
+
+    }
