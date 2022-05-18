@@ -35,7 +35,7 @@ namespace WinAppMazeGame
         }
 
         // ObjectWalker.CreateMatrix(19, 19);
-        // r = 19; c = 19;
+        // r = 20; c = 20s;
         public void CreateMatrix(int r, int c)
         {
             mMatrix = new int[r, c];
@@ -66,7 +66,7 @@ namespace WinAppMazeGame
         }
 
         // ObjectWalker.LocalizeStart();
-        // mRow = 1; mColumn = 8;
+        // mRow = 0; mColumn = 0;
         public void LocalizeStart()
         {
             int i, j;
@@ -78,8 +78,8 @@ namespace WinAppMazeGame
                     if (mMatrix[i, j] == 2)
                     {                        
                         mRow = i; mColumn = j;
-                        // mRow = 1; mColumn = 8;
-                        return;
+                        // mRow = 0; mColumn = 0;
+                        return; //sale de la funcion //break, rompe uno de los bucles (el interno)
                     }
                 }
             }

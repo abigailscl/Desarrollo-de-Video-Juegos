@@ -28,52 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtData = new System.Windows.Forms.TextBox();
             this.picWalker = new System.Windows.Forms.PictureBox();
             this.picCheese = new System.Windows.Forms.PictureBox();
             this.picMaze = new System.Windows.Forms.PictureBox();
             this.picMouse = new System.Windows.Forms.PictureBox();
-            this.txtData = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picWalker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCheese)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaze)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMouse)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picWalker
-            // 
-            this.picWalker.Image = global::WinAppMazeGame.Properties.Resources.raton;
-            this.picWalker.Location = new System.Drawing.Point(298, 36);
-            this.picWalker.Name = "picWalker";
-            this.picWalker.Size = new System.Drawing.Size(25, 25);
-            this.picWalker.TabIndex = 7;
-            this.picWalker.TabStop = false;
-            // 
-            // picCheese
-            // 
-            this.picCheese.Image = global::WinAppMazeGame.Properties.Resources.ima_queso;
-            this.picCheese.Location = new System.Drawing.Point(579, 263);
-            this.picCheese.Name = "picCheese";
-            this.picCheese.Size = new System.Drawing.Size(75, 75);
-            this.picCheese.TabIndex = 6;
-            this.picCheese.TabStop = false;
-            // 
-            // picMaze
-            // 
-            this.picMaze.Image = global::WinAppMazeGame.Properties.Resources.laberinto_principianteXS;
-            this.picMaze.Location = new System.Drawing.Point(98, 12);
-            this.picMaze.Name = "picMaze";
-            this.picMaze.Size = new System.Drawing.Size(475, 475);
-            this.picMaze.TabIndex = 5;
-            this.picMaze.TabStop = false;
-            // 
-            // picMouse
-            // 
-            this.picMouse.Image = global::WinAppMazeGame.Properties.Resources.raton_perez;
-            this.picMouse.Location = new System.Drawing.Point(12, 12);
-            this.picMouse.Name = "picMouse";
-            this.picMouse.Size = new System.Drawing.Size(75, 105);
-            this.picMouse.TabIndex = 4;
-            this.picMouse.TabStop = false;
             // 
             // txtData
             // 
@@ -82,6 +46,38 @@
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(75, 20);
             this.txtData.TabIndex = 8;
+            // 
+            // picWalker
+            // 
+            this.picWalker.Location = new System.Drawing.Point(124, 38);
+            this.picWalker.Name = "picWalker";
+            this.picWalker.Size = new System.Drawing.Size(25, 25);
+            this.picWalker.TabIndex = 7;
+            this.picWalker.TabStop = false;
+            // 
+            // picCheese
+            // 
+            this.picCheese.Location = new System.Drawing.Point(583, 413);
+            this.picCheese.Name = "picCheese";
+            this.picCheese.Size = new System.Drawing.Size(75, 75);
+            this.picCheese.TabIndex = 6;
+            this.picCheese.TabStop = false;
+            // 
+            // picMaze
+            // 
+            this.picMaze.Location = new System.Drawing.Point(98, 12);
+            this.picMaze.Name = "picMaze";
+            this.picMaze.Size = new System.Drawing.Size(500, 500);
+            this.picMaze.TabIndex = 5;
+            this.picMaze.TabStop = false;
+            // 
+            // picMouse
+            // 
+            this.picMouse.Location = new System.Drawing.Point(12, 12);
+            this.picMouse.Name = "picMouse";
+            this.picMouse.Size = new System.Drawing.Size(75, 105);
+            this.picMouse.TabIndex = 4;
+            this.picMouse.TabStop = false;
             // 
             // frmManualBeginnerMaze
             // 

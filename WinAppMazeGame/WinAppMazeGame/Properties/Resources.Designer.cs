@@ -73,6 +73,26 @@ namespace WinAppMazeGame.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Laberinto_20_20 {
+            get {
+                object obj = ResourceManager.GetObject("Laberinto_20_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Laberinto_20_201 {
+            get {
+                object obj = ResourceManager.GetObject("Laberinto_20_201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap laberinto_principianteXS {
             get {
                 object obj = ResourceManager.GetObject("laberinto-principianteXS", resourceCulture);

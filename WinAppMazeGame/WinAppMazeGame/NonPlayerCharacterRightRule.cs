@@ -19,6 +19,8 @@ namespace WinAppMazeGame
         Right // 3 (Field)
     }
 
+    // NPC AI gamer
+
     class NonPlayerCharacterRightRule
     {
         // Data Members - Atributes.
