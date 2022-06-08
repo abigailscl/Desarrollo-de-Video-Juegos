@@ -15,3 +15,14 @@ C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Net
 C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.exe
 C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.pdb
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\bin\Debug\Nettrix.exe.config
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\bin\Debug\Nettrix.exe
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\bin\Debug\Nettrix.pdb
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.csproj.AssemblyReference.cache
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.csproj.SuggestedBindingRedirects.cache
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.NetTrix.resources
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.Properties.Resources.resources
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.csproj.GenerateResource.cache
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.csproj.CoreCompileInputs.cache
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.exe
+C:\Users\panch\Documents\University\Semester VII\Desarrollo de Videojuegos\repo-abi\Nettrix\obj\Debug\Nettrix.pdb

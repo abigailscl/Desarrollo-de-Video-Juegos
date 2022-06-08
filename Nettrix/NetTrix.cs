@@ -20,7 +20,6 @@ namespace Nettrix {
 		private bool stillProcessing = false;
 		private int score = 0;
 		private Block CurrentBlock;
-        private Button button1;
         private Block NextBlock;
 
 		public NetTrix() {
@@ -52,32 +51,22 @@ namespace Nettrix {
 		/// </summary>
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.PicBackground = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.CmdStart = new System.Windows.Forms.Button();
-            this.PicNextBlock = new System.Windows.Forms.PictureBox();
             this.LblNextBlock = new System.Windows.Forms.Label();
             this.lblScoreValue = new System.Windows.Forms.Label();
             this.tmrGameClock = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBackground)).BeginInit();
+            this.PicNextBlock = new System.Windows.Forms.PictureBox();
+            this.PicBackground = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PicNextBlock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBackground)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PicBackground
-            // 
-            this.PicBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PicBackground.Location = new System.Drawing.Point(0, 0);
-            this.PicBackground.Name = "PicBackground";
-            this.PicBackground.Size = new System.Drawing.Size(149, 321);
-            this.PicBackground.TabIndex = 0;
-            this.PicBackground.TabStop = false;
             // 
             // lblScore
             // 
-            this.lblScore.Location = new System.Drawing.Point(159, 43);
+            this.lblScore.Location = new System.Drawing.Point(191, 50);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(76, 18);
+            this.lblScore.Size = new System.Drawing.Size(91, 20);
             this.lblScore.TabIndex = 3;
             this.lblScore.Text = "Score:";
             // 
@@ -86,38 +75,28 @@ namespace Nettrix {
             this.CmdStart.BackColor = System.Drawing.Color.LimeGreen;
             this.CmdStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CmdStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CmdStart.Location = new System.Drawing.Point(168, 222);
+            this.CmdStart.Location = new System.Drawing.Point(202, 256);
             this.CmdStart.Name = "CmdStart";
-            this.CmdStart.Size = new System.Drawing.Size(68, 25);
+            this.CmdStart.Size = new System.Drawing.Size(81, 29);
             this.CmdStart.TabIndex = 9;
             this.CmdStart.Text = "Start!";
             this.CmdStart.UseVisualStyleBackColor = false;
             this.CmdStart.Click += new System.EventHandler(this.CmdStart_Click);
             // 
-            // PicNextBlock
-            // 
-            this.PicNextBlock.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.PicNextBlock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PicNextBlock.Location = new System.Drawing.Point(161, 136);
-            this.PicNextBlock.Name = "PicNextBlock";
-            this.PicNextBlock.Size = new System.Drawing.Size(75, 64);
-            this.PicNextBlock.TabIndex = 6;
-            this.PicNextBlock.TabStop = false;
-            // 
             // LblNextBlock
             // 
             this.LblNextBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNextBlock.Location = new System.Drawing.Point(159, 102);
+            this.LblNextBlock.Location = new System.Drawing.Point(191, 118);
             this.LblNextBlock.Name = "LblNextBlock";
-            this.LblNextBlock.Size = new System.Drawing.Size(76, 16);
+            this.LblNextBlock.Size = new System.Drawing.Size(91, 18);
             this.LblNextBlock.TabIndex = 7;
             this.LblNextBlock.Text = "Next Block:";
             // 
             // lblScoreValue
             // 
-            this.lblScoreValue.Location = new System.Drawing.Point(160, 70);
+            this.lblScoreValue.Location = new System.Drawing.Point(192, 81);
             this.lblScoreValue.Name = "lblScoreValue";
-            this.lblScoreValue.Size = new System.Drawing.Size(76, 18);
+            this.lblScoreValue.Size = new System.Drawing.Size(91, 21);
             this.lblScoreValue.TabIndex = 8;
             this.lblScoreValue.Text = "0";
             this.lblScoreValue.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -127,23 +106,30 @@ namespace Nettrix {
             this.tmrGameClock.Interval = 330;
             this.tmrGameClock.Tick += new System.EventHandler(this.tmrGameClock_Tick);
             // 
-            // button1
+            // PicNextBlock
             // 
-            this.button1.BackgroundImage = global::Nettrix.Properties.Resources.close_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(217, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 29);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = true;
+            this.PicNextBlock.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.PicNextBlock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PicNextBlock.Location = new System.Drawing.Point(193, 157);
+            this.PicNextBlock.Name = "PicNextBlock";
+            this.PicNextBlock.Size = new System.Drawing.Size(90, 74);
+            this.PicNextBlock.TabIndex = 6;
+            this.PicNextBlock.TabStop = false;
+            // 
+            // PicBackground
+            // 
+            this.PicBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PicBackground.Location = new System.Drawing.Point(0, 0);
+            this.PicBackground.Name = "PicBackground";
+            this.PicBackground.Size = new System.Drawing.Size(179, 370);
+            this.PicBackground.TabIndex = 0;
+            this.PicBackground.TabStop = false;
             // 
             // NetTrix
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(246, 318);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(316, 318);
             this.Controls.Add(this.CmdStart);
             this.Controls.Add(this.PicNextBlock);
             this.Controls.Add(this.LblNextBlock);
@@ -151,14 +137,14 @@ namespace Nettrix {
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.PicBackground);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NetTrix";
             this.Text = ".NETTrix";
             this.Activated += new System.EventHandler(this.NetTrix_Activated);
             this.Load += new System.EventHandler(this.NetTrix_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NetTrix_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.PicBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicNextBlock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBackground)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -230,6 +216,7 @@ namespace Nettrix {
 		}
 
 		private void NetTrix_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e) {
+			Console.WriteLine(e.KeyCode.ToString());
 			switch(e.KeyCode) {
 				case Keys.Right:  CurrentBlock.Right();break;
 				case Keys.Left :  CurrentBlock.Left();break;
@@ -278,5 +265,10 @@ namespace Nettrix {
 			if (NextBlock != null)
 				NextBlock.Show(PicNextBlock.Handle);
 		}
-	} 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			this.Close();
+        }
+    } 
 }
