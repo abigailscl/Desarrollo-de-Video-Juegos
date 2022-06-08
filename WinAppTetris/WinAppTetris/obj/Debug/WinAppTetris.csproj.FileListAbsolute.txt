@@ -1,0 +1,10 @@
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.Tetrix.resources
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.Properties.Resources.resources
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\bin\Debug\WinAppTetris.exe.config
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\bin\Debug\WinAppTetris.exe
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\bin\Debug\WinAppTetris.pdb
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.exe
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\WinAppTetris\WinAppTetris\obj\Debug\WinAppTetris.pdb

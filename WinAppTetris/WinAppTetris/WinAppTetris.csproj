@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B3DBFEE-F18E-4161-BBC6-04A4697A8796}</ProjectGuid>
+    <ProjectGuid>{BECCA21B-A04C-4B12-8E24-BF8FC3A8B239}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WinAppMazeGame</RootNamespace>
-    <AssemblyName>WinAppMazeGame</AssemblyName>
+    <RootNamespace>WinAppTetris</RootNamespace>
+    <AssemblyName>WinAppTetris</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,45 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CWalker.cs" />
-    <Compile Include="frmAutomaticBeginnerMazeLeftRule.cs">
+    <Compile Include="Tetrix.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAutomaticBeginnerMazeLeftRule.Designer.cs">
-      <DependentUpon>frmAutomaticBeginnerMazeLeftRule.cs</DependentUpon>
+    <Compile Include="Tetrix.Designer.cs">
+      <DependentUpon>Tetrix.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAutomaticBeginnerMazeRightRule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAutomaticBeginnerMazeRightRule.Designer.cs">
-      <DependentUpon>frmAutomaticBeginnerMazeRightRule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManualBeginnerMaze.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManualBeginnerMaze.Designer.cs">
-      <DependentUpon>frmManualBeginnerMaze.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NonPlayerCharacterRightRule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAutomaticBeginnerMazeLeftRule.resx">
-      <DependentUpon>frmAutomaticBeginnerMazeLeftRule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAutomaticBeginnerMazeRightRule.resx">
-      <DependentUpon>frmAutomaticBeginnerMazeRightRule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManualBeginnerMaze.resx">
-      <DependentUpon>frmManualBeginnerMaze.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Tetrix.resx">
+      <DependentUpon>Tetrix.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,16 +81,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Resources\raton perez.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Resources\raton.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Resources\ima_queso.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Resources\Laberinto_20_20.png" />
+    <None Include="bin\Debug\Resources\close_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
