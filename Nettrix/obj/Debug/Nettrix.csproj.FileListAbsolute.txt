@@ -6,3 +6,12 @@ C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\beg-.net-game-programming-in-c
 C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\beg-.net-game-programming-in-csharp\Source Code updated 08-12-05\Nettrix\obj\Debug\Nettrix.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\beg-.net-game-programming-in-csharp\Source Code updated 08-12-05\Nettrix\obj\Debug\Nettrix.exe
 C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\beg-.net-game-programming-in-csharp\Source Code updated 08-12-05\Nettrix\obj\Debug\Nettrix.pdb
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\bin\Debug\Nettrix.exe
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\bin\Debug\Nettrix.pdb
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.NetTrix.resources
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.Properties.Resources.resources
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.exe
+C:\Users\Lenovo\Documents\SEP SEMESTRE\VIDEOGAMES\Desarrollo-de-Video-Juegos\Nettrix\obj\Debug\Nettrix.pdb
