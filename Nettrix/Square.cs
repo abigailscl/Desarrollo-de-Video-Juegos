@@ -34,16 +34,12 @@ namespace Nettrix {
 
 		// Draws a rectangle with gradient path using the properties above
 		public void Show(System.IntPtr winHandle) {
-			//  If we wish to draw a simple solid triangle with a coloured border, we can use:
-			//        GameGraphics.FillRectangle(New SolidBrush(ForeColor), Location.X, Location.Y, Size.Width, Size.Height)
-			//        GameGraphics.FillRectangle(New SolidBrush(BackColor), Location.X + 1, Location.Y + 1, Size.Width - 2, Size.Height - 2)
 			Graphics GameGraphics;
 			GraphicsPath graphPath;
-			PathGradientBrush brushSquare;
+			SolidBrush brushSquare;
 			Color[] surroundColor;
 			Rectangle rectSquare;
 
-			// Gets the Graphics object of the background picture
 			GameGraphics = Graphics.FromHwnd(winHandle);
 
 			// Create a path consisting of one rectangle
@@ -53,10 +49,7 @@ namespace Nettrix {
 
 			// Creates the gradient brush which will draw the square
 			// Note: Theres one center color and an array of border colors 
-			brushSquare = new PathGradientBrush(graphPath);
-			brushSquare.CenterColor = ForeColor;
-			surroundColor = new Color[]{BackColor};
-			brushSquare.SurroundColors = surroundColor;
+			brushSquare = new SolidBrush(BackColor);
 
 			// Finally draws the square
 			GameGraphics.FillPath(brushSquare, graphPath);
